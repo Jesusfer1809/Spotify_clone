@@ -963,4 +963,9 @@ module.exports = {
     "active",
     "disabled",
   ],
+
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    // ...
+  ],
 };
