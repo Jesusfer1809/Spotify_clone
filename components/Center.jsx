@@ -63,12 +63,12 @@ function Center() {
       </header>
 
       <div
-        className={`h-80 bg-gradient-to-b  ${color} to-black flex items-end p-8 `}
+        className={` h-60 2xs:h-80 bg-gradient-to-b  ${color} to-black flex items-end p-8 `}
       >
         <div className="flex items-end space-x-8">
           <img
             src={playlist?.images[0].url}
-            className="w-32 h-32 md:w-36 md:h-36 lg:w-44 lg:h-44 shadow-xl"
+            className=" w-20 h-20  2xs:w-32 2xs:h-32 md:w-36 md:h-36 lg:w-44 lg:h-44 shadow-xl"
           />
           <div>
             <p>PLAYLIST</p>
