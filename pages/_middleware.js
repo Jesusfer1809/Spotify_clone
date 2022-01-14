@@ -18,6 +18,10 @@ export async function middleware(req) {
     return NextResponse.next();
   }
 
+  if (token && pathname === "/login") {
+    return NextResponse.redirect("/");
+  }
+
   // REDIRECT THEM TO LOGIN IF THEY DONT HAVE TOKEN AND ARE REQUESTING A PROTECTED ROUTES
   if (!token && pathname !== "/login") {
     return NextResponse.redirect("/login");
