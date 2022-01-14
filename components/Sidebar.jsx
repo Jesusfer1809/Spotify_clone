@@ -29,7 +29,7 @@ function Sidebar() {
   }, [session, spotifyApi]);
 
   return (
-    <aside className=" hidden sm:flex flex-col space-y-6 text-xs md:text-sm overflow-y-scroll scrollbar-hide  text-gray-500 h-screen p-5 border-r-[0.1px]  border-gray-900 ">
+    <aside className=" hidden sm:flex flex-col space-y-6 text-xs md:text-sm overflow-y-scroll scrollbar-hide  text-gray-500 h-screen p-5 pb-36 border-r-[0.1px]  border-gray-900 ">
       <div className=" space-y-4  ">
         <button
           className="flex items-center space-x-2  hover:text-white"
