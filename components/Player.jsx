@@ -31,6 +31,8 @@ function Player() {
   const songInfo = useSongInfo();
   console.log(spotifyApi);
 
+  //uwu
+
   const fetchCurrentSong = () => {
     if (!songInfo) {
       spotifyApi.getMyCurrentPlayingTrack().then((data) => {
