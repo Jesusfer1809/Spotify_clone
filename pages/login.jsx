@@ -15,9 +15,7 @@ function login({ providers }) {
           <div>
             <button
               className="text-white inline-block bg-[#1ED760] px-5 py-3 rounded-3xl"
-              onClick={() =>
-                signIn(provider.id, { callbackUrl: process.env.NEXTAUTH_URL })
-              }
+              onClick={() => signIn(provider.id, { callbackUrl: "/" })}
             >
               Connect with {provider.name}
             </button>
