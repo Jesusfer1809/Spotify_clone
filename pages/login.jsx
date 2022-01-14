@@ -29,10 +29,12 @@ export default login;
 
 export async function getServerSideProps() {
   const providers = await getProviders();
+  const session = await getSession(context);
 
   return {
     props: {
       providers,
+      session,
     },
   };
 }
