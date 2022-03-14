@@ -21,7 +21,7 @@ function login({ providers }) {
 
         {providers &&
           Object.values(providers).map((provider) => (
-            <div className="mt-2">
+            <div className="mt-2 ">
               <button
                 className="text-white inline-block bg-[#1ED760] px-7 py-3 rounded-3xl"
                 onClick={() => signIn(provider.id, { callbackUrl: "/" })}
