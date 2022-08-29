@@ -49,8 +49,6 @@ function Center() {
       });
   }, [spotifyApi, playlistId]);
 
-  console.log(playlist);
-
   return (
     <div className=" flex-grow text-white relative h-screen overflow-y-scroll scrollbar-hide">
       <header className="text-sm flex  space-x-3 items-center absolute top-8 right-5 px-3 py-2 bg-black rounded-full">

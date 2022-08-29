@@ -29,7 +29,6 @@ function Player() {
   const [volume, setVolume] = useState(50);
 
   const songInfo = useSongInfo();
-  console.log(spotifyApi);
 
   //uwu
 

@@ -25,6 +25,8 @@ function Song({ track, order }) {
       });
   };
 
+  console.log(track);
+
   return (
     <div
       className="flex text-gray-500 px-0 py-3 xs:px-5 xs:py-4 hover:bg-gray-900 rounded-lg cursor-pointer"
@@ -34,7 +36,13 @@ function Song({ track, order }) {
         <p>{order + 1}</p>
 
         <div className="h-10 w-10 relative">
-          <Image src={track?.track.album.images[0].url} layout="fill" />
+          <Image
+            src={
+              track?.track?.album?.images[0]?.url ||
+              "https://i.scdn.co/image/ab67616d0000b27381f57169bc7f635c068b832f"
+            }
+            layout="fill"
+          />
         </div>
 
         <div>
