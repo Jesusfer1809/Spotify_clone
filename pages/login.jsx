@@ -5,10 +5,16 @@ import logo from "../public/spotify_logo.png";
 
 function login({ providers }) {
   return (
-    <div className="bg-white min-h-screen flex flex-col  items-center  pb-8">
-      <div className="border-b-[1px] border-yellow-300 shadow-[sm] py-12 shadow-yellow-100 flex flex-col items-center">
-        <div className="relative flex items-center  h-[100px] w-[140px] cursor-pointer">
-          <Image src={logo} layout="fill" objectFit="contain" />
+    <div className="bg-slate-900 text-white min-h-screen flex flex-col  items-center justify-center  pb-8 px-2">
+      <div className="border-b-2 border-yellow-300 flex flex-col items-center pb-4">
+        <div className="relative   w-48  cursor-pointer">
+          <Image
+            src={logo}
+            width={400}
+            height={200}
+            layout="responsive"
+            objectFit="contain"
+          />
         </div>
 
         <div className="my-8 mx-2">

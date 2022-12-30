@@ -26,7 +26,7 @@ async function refreshAccessToken(token) {
   }
 }
 
-export default NextAuth({
+export const authOptions = {
   // Configure one or more authentication providers
   providers: [
     SpotifyProvider({
@@ -74,4 +74,6 @@ export default NextAuth({
       return session;
     },
   },
-});
+};
+
+export default NextAuth(authOptions);

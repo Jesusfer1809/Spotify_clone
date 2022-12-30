@@ -21,7 +21,7 @@ import { debounce } from "lodash";
 
 function Player() {
   const spotifyApi = useSpotify();
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const [currentTrackId, setCurrentTrackId] =
     useRecoilState(currentTrackIdState);
 

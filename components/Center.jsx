@@ -39,15 +39,17 @@ function Center() {
   }, [playlistId]);
 
   useEffect(() => {
-    spotifyApi
-      .getPlaylist(playlistId)
-      .then((data) => {
-        setPlaylist(data.body);
-      })
-      .catch((err) => {
-        console.error("Something went wrong", err);
-      });
-  }, [spotifyApi, playlistId]);
+    if (session) {
+      spotifyApi
+        .getPlaylist(playlistId)
+        .then((data) => {
+          setPlaylist(data.body);
+        })
+        .catch((err) => {
+          console.error("Something went wrong", err);
+        });
+    }
+  }, [spotifyApi, playlistId, session]);
 
   return (
     <div className=" flex-grow text-white relative h-screen overflow-y-scroll scrollbar-hide">

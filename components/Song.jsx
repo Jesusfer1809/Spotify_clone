@@ -25,8 +25,6 @@ function Song({ track, order }) {
       });
   };
 
-  console.log(track);
-
   return (
     <div
       className="flex text-gray-500 px-0 py-3 xs:px-5 xs:py-4 hover:bg-gray-900 rounded-lg cursor-pointer"

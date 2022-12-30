@@ -2,10 +2,13 @@ import Head from "next/head";
 import Sidebar from "../components/Sidebar";
 import Center from "../components/Center";
 import Player from "../components/Player";
-import { getSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
+import { authOptions } from "./api/auth/[...nextauth]";
+import { unstable_getServerSession } from "next-auth";
 
 export default function Home() {
-  //xa
+  const { data: session } = useSession();
+
   return (
     <div className=" font-rubik h-screen bg-black overflow-hidden">
       <Head>
@@ -28,11 +31,19 @@ export default function Home() {
 }
 
 export async function getServerSideProps(context) {
-  const session = await getSession(context);
+  const { req, res } = context;
+
+  const session = await unstable_getServerSession(req, res, authOptions);
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
 
   return {
-    props: {
-      session,
-    },
+    props: {},
   };
 }
